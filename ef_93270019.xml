@@ -1,0 +1,1298 @@
+<ecus>
+	<ecu_struct id="93270019" include="evo7base" type="Mitsubishi Lancer  Manual EDM 2004">
+		<scaling name="evo7base_1bytefactor" func_2val="[value]/((32/10)*100)" func_val2="[value]*((32/10)*100)" format="%.1f" metric="units" incdata="0.1" min="1" max="2" storagetype="uint16"/>
+		<scaling name="evo7base_AFR" func_2val="14.7*128/[value]" func_val2="14.7*128/[value]" format="%.1f" metric="AFR" incdata="0.1" min="5" max="30" storagetype="uint8"/>
+		<scaling name="evo7base_AFR16" func_2val="14.7*128/[value]" func_val2="14.7*128/[value]" format="%.1f" metric="AFR" incdata="0.1" min="5" max="30" storagetype="uint16"/>
+		<scaling name="evo7base_AFRWideband" func_2val="0.03137*[value]+9.06" func_val2="([value]-9.06)/0.03137" format="%.2f" metric="AFR" incdata="0.02" min="7" max="25" storagetype="uint16"/>
+		<scaling name="evo7base_AirDensComp" func_2val="[value]/129" func_val2="[value]/129" format="%.3f" metric="Air Density Correction" incdata="0.01" min="0" max="2" storagetype="uint8"/>
+		<scaling name="evo7base_AirFlow16" func_2val="[value]*600/65536" func_val2="[value]*65536/600" format="%.1f" metric="g/s" incdata="1" min="0" max="600" storagetype="uint16"/>
+		<scaling name="evo7base_AirFlow8" func_2val="[value]*321/256" func_val2="[value]*256/321" format="%.1f" metric="g/s" incdata="1" min="0" max="321" storagetype="uint8"/>
+		<scaling name="evo7base_AirTempBaroCorrection" func_2val="[value]/128" func_val2="[value]*128" format="%.2f" metric="Fraction" incdata="0.02" min="0" max="2" storagetype="uint8"/>
+		<scaling name="evo7base_AirTempBaroFactor" func_2val="[value]/64" func_val2="[value]*64" format="%.2f" metric="Fraction" incdata="0.02" min="0" max="2" storagetype="uint16"/>
+		<scaling name="evo7base_AirTempFactor" func_2val="[value]/64" func_val2="[value]*64" format="%.2f" metric="Fraction" incdata="0.02" min="0" max="2" storagetype="uint8"/>
+		<scaling name="evo7base_Baro16" func_2val="[value]/200" func_val2="[value]*200" format="%.3f" metric="bar" incdata="0.001" min="0" max="1.1" storagetype="uint16"/>
+		<scaling name="evo7base_BatteryVoltage" func_2val="[value]*75/1024" func_val2="[value]*1024/75" format="%.2f" metric="V" incdata="0.5" min="0" max="18.75" storagetype="uint16"/>
+		<scaling name="evo7base_Blobbits" func_2val="[value]" func_val2="[value]" format="%.2f" storagetype="uint8">
+			<value name="0" data="00"/>
+			<value name="1" data="01"/>
+		</scaling>
+		<scaling name="evo7base_ECUTime" func_2val="1000*[value]/102" func_val2="102*[value]/1000" format="%.0f" metric="ms" incdata="10" min="0" max="100000" storagetype="uint16"/>
+		<scaling name="evo7base_EGRDuty" func_2val="[value]/1.28" func_val2="[value]*1.28" format="%.1f" metric="%" incdata="0.1" min="0" max="100" storagetype="uint8"/>
+		<scaling name="evo7base_EGRDutyCTFactor" func_2val="[value]/128" func_val2="[value]*128" format="%.1f" metric="Fraction" incdata="0.01" min="0" max="1" storagetype="uint8"/>
+		<scaling name="evo7base_EnrichmentAdj" func_2val="[value]/128" func_val2="[value]*128" format="%.2f" metric="%" incdata="0.05" min="0" max="2" storagetype="uint8"/>
+		<scaling name="evo7base_FuelCutLoadX2" func_2val="[value]*5/2" func_val2="[value]*2/5" format="%.0f" metric="%" incdata="2" min="0" max="638" storagetype="uint8"/>
+		<scaling name="evo7base_Hex16" func_2val="[value]" func_val2="[value]" format="%04X" metric="hex" incdata="1" min="0" max="65535" storagetype="uint16"/>
+		<scaling name="evo7base_Hex8" func_2val="[value]" func_val2="[value]" format="%02X" metric="hex" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<scaling name="evo7base_IPW mcsec" func_2val="[value]*432/1000" func_val2="[value]/432*1000" format="%.0f" metric="mcSec" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<scaling name="evo7base_ISCVSteps" func_2val="[value]" func_val2="[value]" format="%.0f" metric="Steps" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<scaling name="evo7base_ISCVSteps16" func_2val="[value]" func_val2="[value]" format="%.0f" metric="Steps" incdata="1" min="0" max="255" storagetype="uint16"/>
+		<scaling name="evo7base_ISCV_AX2_16" func_2val="[value]*100/255" func_val2="[value]*255/100" format="%.1f" metric="% Demand" incdata="0.5" min="0" max="200" storagetype="uint16"/>
+		<scaling name="evo7base_ISCV_AX2_8" func_2val="[value]*100/255" func_val2="[value]*255/100" format="%.1f" metric="% Demand" incdata="0.5" min="0" max="200" storagetype="uint8"/>
+		<scaling name="evo7base_InjectorLatency" func_2val="[value]*0.024" func_val2="[value]/0.024" format="%.3f" metric="ms" incdata="1" min="0" max="4" storagetype="uint8"/>
+		<scaling name="evo7base_InjectorScaling" func_2val="29241/[value]" func_val2="29241/[value]" format="%.0f" metric="cc/min" incdata="10" min="1" max="1600" storagetype="uint16"/>
+		<scaling name="evo7base_Load" func_2val="[value]*10/32" func_val2="[value]*32/10" format="%.0f" metric="LOAD kPa" incdata="1" min="0" max="300" storagetype="uint16"/>
+		<scaling name="evo7base_Load16" func_2val="[value]*5/8" func_val2="[value]*8/5" format="%.1f" metric="LOAD kPa" incdata="1" min="0" max="100" storagetype="uint16"/>
+		<scaling name="evo7base_Load8" func_2val="[value]*5/8" func_val2="[value]*8/5" format="%.1f" metric="LOAD kPa" incdata="1" min="0" max="160" storagetype="uint8"/>
+		<scaling name="evo7base_LoadBoost" func_2val="[value]*5/4" func_val2="[value]*4/5" format="%.0f" metric="%" incdata="1" min="0" max="319" storagetype="uint8"/>
+		<scaling name="evo7base_LoadError" func_2val="[value]*5/32-20" func_val2="([value]+20)*32/5" format="%.1f" metric="%" incdata="0.5" min="-20" max="20" storagetype="uint16"/>
+		<scaling name="evo7base_LT Trim Hz" func_2val="[value]*6.25" func_val2="[value]/6.25" format="%.2f" metric="Hz" incdata="6.25" min="0" max="1593.75" storagetype="uint8"/>
+		<scaling name="evo7base_MAFHz" func_2val="6.29*[value]/64" func_val2="64/(6.29*[value])" format="%.0f" metric="Hz" incdata="1" min="0" max="5000" storagetype="int16"/>
+		<scaling name="evo7base_MAFScaling plus MAF Adder" func_2val="([value]+140)*321/256" func_val2="[value]*256/321-140" format="%.1f" metric="MAF Scaling + MAF Adder(g/s)" incdata="2" min="0" max="495" storagetype="uint8"/>
+		<scaling name="evo7base_MAFsize" func_2val="39044/[value]" func_val2="39044/[value]" format="%.0f" metric="units" incdata="1" min="1000" max="5000" storagetype="int16"/>
+		<scaling name="evo7base_MAP 16bit" func_2val="[value]/3" func_val2="[value]*3" format="%.1f" metric="kPa" incdata="0.3333" min="0" max="400" storagetype="uint16"/>
+		<scaling name="evo7base_MAP VE load" func_2val="[value]*(5/32*0.596)" func_val2="[value]/(5/32*0.596)" format="%.1f" metric="Load (%)" incdata="0.093125" min="0" max="600" storagetype="uint16"/>
+		<scaling name="evo7base_McSec" func_2val="[value]*4" func_val2="[value]/4" format="%.0f" metric="mcSec" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<scaling name="evo7base_O2 Trim" func_2val="([value]-128)/5" func_val2="([value]*5)+128" format="%.1f" metric="%" incdata="0.2" min="-25.6" max="25.4" storagetype="uint8"/>
+		<scaling name="evo7base_O2Voltage" func_2val="0.0195*[value]" func_val2="[value]/0.0195" format="%.2f" metric="V" incdata="0.01" min="0" max="1" storagetype="uint16"/>
+		<scaling name="evo7base_OffsetWGDC" func_2val="([value]-128)/2" func_val2="[value]*2+128" format="%.1f" metric="WGDC Change" incdata="0.5" min="-64" max="63.5" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa16" func_2val="[value]/(5.18*2)" func_val2="[value]*(2*5.18)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="32" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 GM3barMAP" func_2val="[value]/(5.728*2)" func_val2="[value]*(2*5.728)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="29" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 JDM3barMAP" func_2val="[value]/(5.18*2)" func_val2="[value]*(2*5.18)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="32" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 Kavlico3.5barMAP" func_2val="([value]/(4.098*2))-6.25" func_val2="([value]+6.25)*(2*4.098)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="34.3" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 Kavlico5barMAP" func_2val="([value]/(2.732*2))-9.39" func_val2="([value]+9.39)*(2*2.732)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="51.4" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 OMNI3BarMAP" func_2val="[value]/(5.616*2)" func_val2="[value]*(2*5.616)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="29.6" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa16 OMNI4barMAP" func_2val="[value]/(4.23*2)" func_val2="[value]*(2*4.23)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="39.2" storagetype="uint16"/>
+		<scaling name="evo7base_PSIa8" func_2val="[value]/(5.18*2)" func_val2="[value]*(2*5.18)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="24.6" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 GM3barMAP" func_2val="[value]/(5.728*2)" func_val2="[value]*(2*5.728)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="22.3" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 JDM3barMAP" func_2val="[value]/(5.18*2)" func_val2="[value]*(2*5.18)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="24.6" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 JDM3barMAP-Adj" func_2val="([value]/(5.18*2))+7.4" func_val2="([value]-7.4)*(2*5.18)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="32" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 Kavlico3.5barMAP" func_2val="([value]/(4.098*2))-6.25" func_val2="([value]+6.25)*(2*4.098)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="24.9" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 Kavlico5barMAP" func_2val="([value]/(2.732*2))-9.39" func_val2="([value]+9.39)*(2*2.732)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="37.3" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 OMNI3barMAP" func_2val="[value]/(5.616*2)" func_val2="[value]*(2*5.616)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="22.7" storagetype="uint8"/>
+		<scaling name="evo7base_PSIa8 OMNI4barMAP" func_2val="[value]/(4.23*2)" func_val2="[value]*(2*4.23)" format="%.1f" metric="PSIa" incdata="0.1" min="0" max="30.1" storagetype="uint8"/>
+		<scaling name="evo7base_Percent (128)" func_2val="[value]/1.28" func_val2="[value]*1.28" format="%.0f" metric="%" incdata="1" min="0" max="100" storagetype="uint8"/>
+		<scaling name="evo7base_Percent255" func_2val="100*[value]/255" func_val2="255*[value]/100" format="%.0f" metric="%" incdata="1" min="0" max="100" storagetype="uint8"/>
+		<scaling name="evo7base_RPM" func_2val="[value]*1000/256" func_val2="[value]*256/1000" format="%.0f" metric="RPM" incdata="50" min="0" max="11000" storagetype="uint16"/>
+		<scaling name="evo7base_RPM8" func_2val="[value]*125/16" func_val2="[value]*16/125" format="%.0f" metric="RPM" incdata="50" min="0" max="2000" storagetype="uint8"/>
+		<scaling name="evo7base_RPMLimit" func_2val="7500000/[value]" func_val2="7500000/[value]" format="%.0f" metric="RPM" incdata="60" min="0" max="9000" storagetype="uint16"/>
+		<scaling name="evo7base_RPMPerKPH" func_2val="[value]/36.37" func_val2="36.37*[value]" format="%.0f" metric="RPM/KPH" incdata="5" min="0" max="3000" storagetype="uint16"/>
+		<scaling name="evo7base_RPMPerMPH" func_2val="[value]/22.6" func_val2="22.6*[value]" format="%.0f" metric="RPM/MPH" incdata="50" min="0" max="10000" storagetype="uint16"/>
+		<scaling name="evo7base_RPMStatLimit" func_2val="[value]*31.25" func_val2="[value]/31.25" format="%.0f" metric="RPM" incdata="31.25" min="0" max="9000" storagetype="uint16"/>
+		<scaling name="evo7base_RPMStatLimit8" func_2val="[value]*31.25" func_val2="[value]/31.25" format="%.0f" metric="RPM" incdata="31.25" min="0" max="9000" storagetype="uint8"/>
+		<scaling name="evo7base_RPMTarget" func_2val="[value]*125/16" func_val2="[value]*16/125" format="%.0f" metric="RPM" incdata="50" min="0" max="2000" storagetype="uint16"/>
+		<scaling name="evo7base_RPMperMPH Gear" func_2val="[value]" func_val2="[value]" format="%.0f" metric="Gear" incdata="1" min="0" max="65535" storagetype="int8"/>
+		<scaling name="evo7base_RamAdress" func_2val="[value]-4294901760" func_val2="[value]+4294901760" format="%4.1X" metric="hex" incdata="1" min="10000" max="10005" storagetype="uint32"/>
+		<scaling name="evo7base_Temp" func_2val="[value]-40" func_val2="[value]+40" format="%.0f" metric="Celsius" incdata="1" min="-40" max="215" storagetype="uint16"/>
+		<scaling name="evo7base_Temp8" func_2val="(9/5)*([value]-40)+32" func_val2="(5/9)*([value]-32)+40" format="%.0f" metric="Fahrenheit" incdata="1" min="-30" max="900" storagetype="uint8"/>
+		<scaling name="evo7base_TempScale" func_2val="(9/5)*[value]+32" func_val2="(5/9)*([value]-32)" format="%.0f" metric="Fahrenheit" incdata="1" min="-30" max="900" storagetype="int8"/>
+		<scaling name="evo7base_TempScaleFuel" func_2val="(9/5)*([value]/10)+32" func_val2="(5/9)*([value]-32)*10" format="%.0f" metric="Fahrenheit" incdata="1" min="-30" max="900" storagetype="int16"/>
+		<scaling name="evo7base_ThrottlePercentage" func_2val="[value]/255*100" func_val2="[value]*255/100" format="%.0f" metric="%" incdata="1" min="0" max="100" storagetype="uint16"/>
+		<scaling name="evo7base_ThrottlePercentage8" func_2val="[value]/255*100" func_val2="[value]*255/100" format="%.0f" metric="%" incdata="1" min="0" max="100" storagetype="uint8"/>
+		<scaling name="evo7base_ThrottleVoltage" func_2val="[value]*5/256" func_val2="[value]*256/5" format="%.2f" metric="V" incdata="0.05" min="0" max="5" storagetype="uint8"/>
+		<scaling name="evo7base_ThrottleVoltage16" func_2val="[value]*5/256" func_val2="[value]*256/5" format="%.2f" metric="V" incdata="0.05" min="0" max="5" storagetype="uint16"/>
+		<scaling name="evo7base_Time" func_2val="[value]*25" func_val2="[value]/25" format="%.0f" metric="ms" incdata="25" min="0" max="1.63838e+06" storagetype="uint16"/>
+		<scaling name="evo7base_TimeInjCranking" func_2val="[value]*0.008" func_val2="[value]/0.008" format="%.1f" metric="ms" incdata="1" min="0" max="500" storagetype="uint16"/>
+		<scaling name="evo7base_TimeSec" func_2val="[value]/10" func_val2="[value]*10" format="%.1f" metric="s" incdata="0.1" min="0" max="25.5" storagetype="uint16"/>
+		<scaling name="evo7base_Timing" func_2val="[value]" func_val2="[value]" format="%.0f" metric="degrees" incdata="1" min="-128" max="128" storagetype="int8"/>
+		<scaling name="evo7base_TimingTrim8" func_2val="[value]-128" func_val2="[value]+128" format="%.0f" metric="units" incdata="1" min="-128" max="128" storagetype="uint8"/>
+		<scaling name="evo7base_ValveTiming" func_2val="72-[value]*0.6" func_val2="(72-[value])/0.6" format="%.1f" metric="degrees" incdata="0.6" min="0" max="30" storagetype="uint8"/>
+		<scaling name="evo7base_ValveTiming16" func_2val="72-[value]*0.6/32" func_val2="(72-[value])*32/0.6" format="%.1f" metric="degrees" incdata="0.1" min="-1.8" max="28.8" storagetype="uint16"/>
+		<scaling name="evo7base_VehicleSpeed" func_2val="([value]*2)*0.621371192" func_val2="([value]/0.621371192)/2" format="%.0f" metric="MPH" incdata="1" min="0" max="317" storagetype="uint16"/>
+		<scaling name="evo7base_VehicleSpeed8" func_2val="([value]*2)*0.621371192" func_val2="([value]/0.621371192)/2" format="%.0f" metric="MPH" incdata="1" min="0" max="317" storagetype="uint8"/>
+		<scaling name="evo7base_Volts16" func_2val="[value]*5/255" func_val2="[value]*255/5" format="%.2f" metric="Volts" incdata="0.05" min="0" max="5" storagetype="uint16"/>
+		<scaling name="evo7base_VoltsADC1023" func_2val="[value]*5/1023" func_val2="[value]*1023/5" format="%.3f" metric="Volts" incdata="0.005" min="0" max="5" storagetype="uint16"/>
+		<scaling name="evo7base_VoltsADCx4" func_2val="[value]*5/1023" func_val2="[value]*1023/5" format="%.3f" metric="Volts" incdata="0.005" min="0" max="5" storagetype="uint16"/>
+		<scaling name="evo7base_kPa GM3barMAP" func_2val="[value]*0.3014" func_val2="[value]/0.3014" format="%.1f" metric="kPa" incdata="0.3014" min="0" max="350" storagetype="uint16"/>
+		<scaling name="evo7base_kPa JDM3barMAP" func_2val="[value]/3" func_val2="[value]*3" format="%.1f" metric="kPa" incdata="0.3333" min="0" max="350" storagetype="uint16"/>
+		<scaling name="evo7base_kPa Kavlico3.5barMAP" func_2val="[value]*0.4213-43.1" func_val2="([value]+43.1)/0.4213" format="%.1f" metric="kPa" incdata="0.4213" min="0" max="400" storagetype="uint16"/>
+		<scaling name="evo7base_kPa Kavlico5barMAP" func_2val="[value]*0.6320-64.7" func_val2="([value]+64.7)/0.6320" format="%.1f" metric="kPa" incdata="0.632" min="0" max="550" storagetype="uint16"/>
+		<scaling name="evo7base_kPa OMNI3barMAP" func_2val="[value]*0.3074" func_val2="[value]/0.3074" format="%.1f" metric="kPa" incdata="0.3074" min="0" max="350" storagetype="uint16"/>
+		<scaling name="evo7base_kPa OMNI4barMAP" func_2val="[value]*0.4072" func_val2="[value]/0.4072" format="%.1f" metric="kPa" incdata="0.4072" min="0" max="450" storagetype="uint16"/>
+		<scaling name="evo7base_uint16" func_2val="[value]" func_val2="[value]" format="%.0f" metric="units" incdata="1" min="0" max="65535" storagetype="uint16"/>
+		<scaling name="evo7base_uint8" func_2val="[value]" func_val2="[value]" format="%.0f" metric="units" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<scaling name="ecu_ColdStartTime" func_2val="[value]*0.008" func_val2="[value]/0.008" format="%.1f" metric="ms" incdata="1" min="0" max="500" storagetype="uint16"/>
+		<scaling name="evo7base_msec" func_2val="[value]*4" func_val2="[value]/4" format="%.0f" metric="units" incdata="1" min="0" max="255" storagetype="uint8"/>
+		<map name="VE Map 1" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<cols scaling="evo7base_Load" count="11" offset="#6D28" caption="Load"/>
+			<rows scaling="evo7base_RPM" count="19" offset="#6CF8" caption="RPM"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#303D" format="%.1f" incb="1" incdatab="1" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="VE Map 2" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<cols scaling="evo7base_Load" count="11" offset="#6D28" caption="Load"/>
+			<rows scaling="evo7base_RPM" count="19" offset="#6CF8" caption="RPM"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#3119" format="%.1f" incdatab="1" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="VE Map 3" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<cols scaling="evo7base_Load" count="11" offset="#6D28" caption="Load"/>
+			<rows scaling="evo7base_RPM" count="19" offset="#6CF8" caption="RPM"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#31F5" format="%.1f" incb="1" incdatab="1" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="VE Map 4 n/a" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<cols scaling="evo7base_Load" count="11" offset="#6D28" caption="Load"/>
+			<rows scaling="evo7base_RPM" count="19" offset="#6CF8" caption="RPM"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#58DF" format="%.1f" incb="1" incdatab="1" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="ECU Internal ID" type="2" active="1" class="Misc">
+			<cols count="4" caption="Byte Position">
+				<value>b1</value>
+				<value>b2</value>
+				<value>b3</value>
+				<value>b4</value>
+			</cols>
+			<data offset="#f52" scaling="evo7base_Hex8"/>
+		</map>
+		<map name="Immo &amp; Rear O2  ON/OFF" type="1" active="1" help="" class="Misc" map_struct="" level="0">
+			<data scaling="evo7base_Hex16" count="1" offset="#FAA" incdatab="1" view="num" cols="1" color_dir="1"/>
+		</map>
+		<map name="EGR System ON/OFF" type="1" active="1" class="Misc">
+			<data offset="#103d" scaling="evo7base_uint8"/>
+		</map>
+		<map name="MUT table" type="3" active="1" help="" class="MUT" map_struct="" level="0">
+			<cols scaling="evo7base_Hex16" count="32" offset="#0" caption="X">
+				<value>-</value>
+				<value>0</value>
+				<value>-</value>
+				<value>1</value>
+				<value>-</value>
+				<value>2</value>
+				<value>-</value>
+				<value>3</value>
+				<value>-</value>
+				<value>4</value>
+				<value>-</value>
+				<value>5</value>
+				<value>-</value>
+				<value>6</value>
+				<value>-</value>
+				<value>7</value>
+				<value>-</value>
+				<value>8</value>
+				<value>-</value>
+				<value>9</value>
+				<value>-</value>
+				<value>A</value>
+				<value>-</value>
+				<value>B</value>
+				<value>-</value>
+				<value>C</value>
+				<value>-</value>
+				<value>D</value>
+				<value>-</value>
+				<value>E</value>
+				<value>-</value>
+				<value>F</value>
+			</cols>
+			<rows count="29" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="Y" desc="">
+				<value>MUT0X</value>
+				<value>MUT1X</value>
+				<value>MUT2X</value>
+				<value>MUT3X</value>
+				<value>MUT4X</value>
+				<value>MUT5X</value>
+				<value>MUT6X</value>
+				<value>MUT7X</value>
+				<value>MUT8X</value>
+				<value>MUT9X</value>
+				<value>MUTAX</value>
+				<value>MUTBX</value>
+				<value>MUTCX</value>
+				<value>MUTDX</value>
+				<value>MUTEX</value>
+				<value>MUTFX</value>
+				<value>MUT10X</value>
+				<value>MUT11X</value>
+				<value>MUT12X</value>
+				<value>MUT13X</value>
+				<value>MUT14X</value>
+				<value>MUT15X</value>
+				<value>MUT16X</value>
+				<value>MUT17X</value>
+				<value>MUT18X</value>
+				<value>MUT19X</value>
+				<value>MUT1AX</value>
+				<value>MUT1BX</value>
+				<value>MUT1CX</value>
+			</rows>
+			<data scaling="evo7base_Hex16" count="1" offset="#34D14" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="MAF Smoothing Table 2" type="2" active="0" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_uint16" count="21" offset="#6520" caption="Load"/>
+			<data scaling="evo7base_AirFlow8" count="1" offset="#0" incdatab="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Thermo Fan Duty 1" type="3" active="1" help="" class="Misc" map_struct="" level="0">
+			<cols count="12" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="Conditions" desc="">
+				<value>On1</value>
+				<value>On2</value>
+				<value>On3</value>
+				<value>On4</value>
+				<value>Off1</value>
+				<value>Off2</value>
+				<value>Off3</value>
+				<value>Off4</value>
+				<value>A/C1</value>
+				<value>A/C2</value>
+				<value>A/C3</value>
+				<value>A/C4</value>
+				<value></value>
+				<value></value>
+				<value></value>
+			</cols>
+			<rows scaling="evo7base_Temp" count="12" offset="#68FC" caption="Engine Temp"/>
+			<data scaling="evo7base_uint8" count="1" offset="#3C4A" func_2val="[value]/1.28" func_val2="[value]*1.28" metric="%" incdatab="1" max="100" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="95 Octane Fuel Map" active="1">
+			<cols count="9" offset="#6776"/>
+			<rows count="14" offset="#6750"/>
+			<data offset="#5DFD"/>
+		</map>
+		<map name="91 Octane Fuel Map" active="1">
+			<cols count="9" offset="#6776"/>
+			<rows count="14" offset="#6750"/>
+			<data offset="#5389"/>
+		</map>
+		<map name="Injector Battery Voltage Latency Compensation" active="1">
+			<rows offset="#66B8"/>
+			<data offset="#3428"/>
+		</map>
+		<map name="Rev Limit" active="1">
+			<data offset="#1576"/>
+		</map>
+		<map name="Accel Enrichment">
+			<rows count="13" offset="#638E"/>
+		</map>
+		<map name="Open Loop Load # 1" active="1">
+			<rows count="14" offset="#79D2"/>
+			<data offset="#631E"/>
+		</map>
+		<map name="Open Loop Load # 2" active="1">
+			<rows count="14" offset="#79D2"/>
+			<data offset="#6332"/>
+		</map>
+		<map name="Open Loop Throttle Low Load" active="1">
+			<rows count="13" offset="#64D6"/>
+			<data offset="#3334"/>
+		</map>
+		<map name="Open Loop Throttle High Load" active="1">
+			<rows count="13" offset="#64D6"/>
+			<data offset="#3348"/>
+		</map>
+		<map name="Barometric Pressure Compensation">
+			<data max="2.7"/>
+		</map>
+		<map name="Idle Stepper Look-up Table" active="1">
+			<cols scaling="evo7base_Temp" offset="#6950"/>
+			<rows offset="#696A"/>
+			<data offset="#4777"/>
+		</map>
+		<map name="Knock Sensor Filter Map 1" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#3F7D"/>
+		</map>
+		<map name="Knock Sensor Filter Map 2" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#3FEB"/>
+		</map>
+		<map name="Knock Sensor Filter Map 3" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#4059"/>
+		</map>
+		<map name="Knock Sensor Filter Map 4" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#40C7"/>
+		</map>
+		<map name="Knock Sensor Filter Map 5" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#4135"/>
+		</map>
+		<map name="Knock Sensor Filter Map 6" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#431B"/>
+		</map>
+		<map name="Knock Sensor Filter Map 7" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#4389"/>
+		</map>
+		<map name="Knock Sensor Filter Map 8" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#43F7"/>
+		</map>
+		<map name="Knock Sensor Filter Map 9" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<rows offset="#6B14"/>
+			<data offset="#4465"/>
+		</map>
+		<map name="MAF Sensor Filtering">
+			<data offset="#150E"/>
+			<rows storagetype="uint8"/>
+		</map>
+		<map name="MAF Size" active="1">
+			<data offset="#1513"/>
+		</map>
+		<map name="Min Coolant Temp for Closed Loop" active="1">
+			<data offset="#159C"/>
+		</map>
+		<map name="Immobilizer" active="1">
+		</map>
+		<map name="Init Code" active="1">
+		</map>
+		<map name="HIGH EGR DUTY Cycle" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="10" offset="#6ADA"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6AF8"/>
+			<data scaling="evo7base_EGRDuty" count="1" offset="#3DAB" incdata="1" max="255" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="LOW EGR DUTY Cycle" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="10" offset="#6ADA"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6AF8"/>
+			<data scaling="evo7base_EGRDuty" count="1" offset="#3E11" incdata="1" incdatab="1" max="255" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="EGR RPM" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#3E7E" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="OBD-II Codes" type="3" active="1" help="" class="OBD-II" map_struct="" level="0">
+			<rows scaling="evo7base_Hex16" count="13" offset="#0" caption="r5 (hex)">
+				<value>00</value>
+				<value>01</value>
+				<value>02</value>
+				<value>03</value>
+				<value>04</value>
+				<value>05</value>
+				<value>06</value>
+				<value>07</value>
+				<value>08</value>
+				<value>09</value>
+				<value>0A</value>
+				<value>0B</value>
+				<value>0C</value>
+				<value>0D</value>
+				<value>0E</value>
+				<value>0F</value>
+			</rows>
+			<cols scaling="evo7base_Hex16" count="16" offset="#0" caption="r4 (hex)">
+				<value>8000</value>
+				<value>4000</value>
+				<value>2000</value>
+				<value>1000</value>
+				<value>800</value>
+				<value>400</value>
+				<value>200</value>
+				<value>100</value>
+				<value>80</value>
+				<value>40</value>
+				<value>20</value>
+				<value>10</value>
+				<value>8</value>
+				<value>4</value>
+				<value>2</value>
+				<value>1</value>
+			</cols>
+			<data scaling="evo7base_Hex16" count="1" offset="#96B0" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="High Oct EGR-Enabled Advance" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="21" offset="#6792"/>
+			<cols scaling="evo7base_Load" count="12" offset="#67C6"/>
+			<data scaling="evo7base_Timing" count="1" offset="#38D5" incdata="0" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="Low Oct EGR-Enabled Advance" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="21" offset="#6792"/>
+			<cols scaling="evo7base_Load" count="12" offset="#67C6"/>
+			<data scaling="evo7base_TimingTrim8" count="1" offset="#37C1" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="AFR-TEMP" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="7" offset="#6938"/>
+			<data scaling="evo7base_AFR" count="1" offset="#302A" incdata="1" incdatab="1" min="0" max="255" view="num" color_dir="1"/>
+		</map>
+		<map name="unk054" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#39D8" incdatab="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Desired Idle RPM-Drive" active="1">
+			<data offset="#3AB8"/>
+			<rows offset="#6DA2"/>
+		</map>
+		<map name="Desired Idle RPM-Neutral" active="1">
+			<rows offset="#6DA2"/>
+			<data offset="#3AC6"/>
+		</map>
+		<map name="Decel Fuel Cut Delay #1" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<cols scaling="evo7base_Temp" count="7" offset="#6822"/>
+			<data scaling="evo7base_uint8" count="1" offset="#636D" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="Decel Fuel Cut Delay #2" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<cols scaling="evo7base_Temp" count="7" offset="#6822"/>
+			<data scaling="evo7base_uint8" count="1" offset="#63B1" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="Decel Fuel Cut Delay #3" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<cols scaling="evo7base_Temp" count="7" offset="#6822"/>
+			<data scaling="evo7base_uint8" count="1" offset="#63F5" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="Decel Fuel Cut Delay #4" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<cols scaling="evo7base_Temp" count="7" offset="#6822"/>
+			<data scaling="evo7base_uint8" count="1" offset="#6439" incdatab="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="Knock Sensor Filter Map 11" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data offset="#4541"/>
+			<rows offset="#6B14"/>
+		</map>
+		<map name="Knock Sensor Filter Map 10" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data offset="#44D3"/>
+			<rows offset="#6B14"/>
+		</map>
+		<map name="Knock Sensor Filter Map 12" active="1">
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data scaling="evo7base_uint8" offset="#49E9"/>
+			<rows offset="#6B14"/>
+		</map>
+		<map name="Knock Sensor Filter Map 13" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data scaling="evo7base_uint8" count="1" offset="#4A57" incdata="0" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="Async Accel Above TPS Enrichment Cutoff vs RPM" type="2" active="1" help="" class="Accel Enrichment" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_ThrottlePercentage8" count="1" offset="#3568" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Async Accel Multiplier vs TPS Delta" type="2" active="1" help="" class="Accel Enrichment" map_struct="" level="0">
+			<rows count="9" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="TPS Delta" desc="">
+				<value>0.0%</value>
+				<value>1.6%</value>
+				<value>3.1%</value>
+				<value>4.7%</value>
+				<value>6.3%</value>
+				<value>7.8%</value>
+				<value>9.4%</value>
+				<value>11.0%</value>
+				<value>12.5%</value>
+			</rows>
+			<data count="1" offset="#353F" storagetype="uint8" func_2val="[value]/128" func_val2="[value]*128" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0.02" incdatab="0.02" inc_dir="1" min="0" max="5" view="num" color_dir="1"/>
+		</map>
+		<map name="Async Accel vs Coolant Temp Adder" type="2" active="1" help="" class="Accel Enrichment" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#357A" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" min="0" max="255" view="num" color_dir="1"/>
+		</map>
+		<map name="Asynch_Accel_vsRPM Adder" type="2" active="1" help="" class="Accel Enrichment" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#3588" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="1" incdatab="1" inc_dir="1" min="0" max="255" view="num" color_dir="1"/>
+		</map>
+		<map name="Desired Idle RPM with AC on" active="1">
+			<rows storagetype="uint8"/>
+			<data offset="#18BE"/>
+		</map>
+		<map name="Desired ISCV intial step position with AC off-Drive" active="1">
+			<data offset="#3AE2"/>
+			<rows offset="#6DA2"/>
+		</map>
+		<map name="Desired ISCV intial step position with AC off-Neutral" active="1">
+			<data offset="#3AD4"/>
+			<rows offset="#6DA2"/>
+		</map>
+		<map name="Desired ISCV intial step position with AC on-Neutral" active="1">
+			<data offset="#34E0"/>
+			<rows offset="#6866"/>
+		</map>
+		<map name="High Intake Air Temp Idle Speed Target" active="1">
+			<rows storagetype="uint8"/>
+			<data offset="#24BE"/>
+		</map>
+		<map name="High Intake Air Temp ISCV Increase" active="1">
+			<rows count="2" storagetype="uint8"/>
+			<data scaling="evo7base_ISCVSteps" offset="#24C2"/>
+		</map>
+		<map name="Stationary Rev Limit" active="1">
+			<data offset="#1576" func_2val="7500000/[value]" func_val2="7500000/[value]" incdata="60" incdatab="60"/>
+		</map>
+		<map name="Injector latency base" type="1" active="1" help="" class="Fuel" map_struct="" level="0">
+			<data count="1" offset="#1500" storagetype="uint16" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" cols="1" color_dir="1"/>
+		</map>
+		<map name="Injector Scaling" active="1">
+			<data offset="#150C"/>
+		</map>
+		<map name="Speed Limit" active="1">
+			<rows storagetype="uint8"/>
+			<data offset="#1578"/>
+		</map>
+		<map name="AFR-RPM" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="15" offset="#6D46"/>
+			<data scaling="evo7base_AFR" count="1" offset="#32CC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="RPM Injektor Duty Cycle??" type="2" active="1" help="" class="Limits" map_struct="" level="0">
+			<rows count="4" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#32DC" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk007" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_AirTempFactor" count="1" offset="#32E6" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ST Fuel Trim" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_O2 Trim" count="1" offset="#335C" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Коррекция FUEL от Air Temp" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="7" offset="#6938"/>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#33AC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="LOAD-AFR компенсация" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Load" count="9" offset="#6602"/>
+			<data scaling="evo7base_AFR" count="1" offset="#33BA" incdata="0.01" incdatab="0.01" min="0" max="20" view="num" color_dir="1"/>
+		</map>
+		<map name="Air Temperature Compensation AFR 1" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="10" offset="#68BC"/>
+			<data scaling="evo7base_AFR" count="1" offset="#33CA" incdata="0" min="0" max="21" view="num" color_dir="1"/>
+		</map>
+		<map name="Post Cranking Transient Enrichment vs Coolant Temp " type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="10" offset="#68BC"/>
+			<data count="1" offset="#33DA" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk090" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data count="1" offset="#33EA" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="LIMP HOME LOAD MAP, TPS v RPM " type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="5" offset="#683A"/>
+			<cols scaling="evo7base_ThrottleVoltage16" count="7" offset="#684E"/>
+			<data scaling="evo7base_Load8" count="1" offset="#33FF" incdatab="1" max="140" view="num" order="rc" color_dir="0"/>
+		</map>
+		<map name="Start IPW by RPM correction 1" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#6594"/>
+			<data scaling="evo7base_IPW mcsec" count="1" offset="#348A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Start IPW by RPM correction 2" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#6594"/>
+			<data scaling="evo7base_IPW mcsec" count="1" offset="#3498" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Cranking IPW Compensation vs Time 1 (Startup)" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows count="20" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="Time Since Engaging Starter (sec)" desc="">
+				<value>0.000</value>
+				<value>0.022</value>
+				<value>0.044</value>
+				<value>0.066</value>
+				<value>0.088</value>
+				<value>0.110</value>
+				<value>0.132</value>
+				<value>0.154</value>
+				<value>0.176</value>
+				<value>0.198</value>
+				<value>0.220</value>
+				<value>0.242</value>
+				<value>0.264</value>
+				<value>0.286</value>
+				<value>0.308</value>
+				<value>0.330</value>
+				<value>0.352</value>
+				<value>0.374</value>
+				<value>0.396</value>
+				<value>0.418</value>
+			</rows>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#34A0" incdatab="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Cranking IPW Compensation vs Time 2-1 (Startup)" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows count="20" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="Time Since Engaging Starter (sec)" desc="">
+				<value>0.000</value>
+				<value>0.022</value>
+				<value>0.044</value>
+				<value>0.066</value>
+				<value>0.088</value>
+				<value>0.110</value>
+				<value>0.132</value>
+				<value>0.154</value>
+				<value>0.176</value>
+				<value>0.198</value>
+				<value>0.220</value>
+				<value>0.242</value>
+				<value>0.264</value>
+				<value>0.286</value>
+				<value>0.308</value>
+				<value>0.330</value>
+				<value>0.352</value>
+				<value>0.374</value>
+				<value>0.396</value>
+				<value>0.418</value>
+			</rows>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#34B4" incdatab="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Crancing IPW Compensation vs RPM " type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="11" offset="#689C"/>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#34CE" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk080" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#34EE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk082" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3500" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0521  (0521-0524 завязаны в алгоритм)" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#3522" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0522" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#3534" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk081" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#354E" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk102" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="9" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#3559" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="IPW Adder for Cold Start #1" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data scaling="ecu_ColdStartTime" count="1" offset="#359C" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk137" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="9" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#35AE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk068-&gt;unk069" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#35C4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk083 (083-087 связаны в алгоритм)" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#35D8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk085" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#35E6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk084" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Load" count="9" offset="#65CA"/>
+			<data count="1" offset="#35F8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk087" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3608" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk086" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3616" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0523" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3624" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0524" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3632" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR to COOL 1" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="13" offset="#661E"/>
+			<data scaling="evo7base_AFR" count="1" offset="#365E" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR to COOL 2" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="13" offset="#661E"/>
+			<data scaling="evo7base_AFR" count="1" offset="#3672" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR to COOL 3" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="13" offset="#661E"/>
+			<data scaling="evo7base_AFR" count="1" offset="#3686" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR to COOL 4" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="13" offset="#661E"/>
+			<data scaling="evo7base_AFR" count="1" offset="#369A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="High Octane Ignition Map 1" active="1">
+			<rows count="21" offset="#6792"/>
+			<cols count="12" offset="#67C6"/>
+			<data offset="#36B9"/>
+		</map>
+		<map name="Low Octane Ignition Map 1" active="1">
+			<data offset="#5413"/>
+			<rows count="21" offset="#6792"/>
+			<cols count="12" offset="#67C6"/>
+		</map>
+		<map name="unk055" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#39EA" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Trim vs Engine Temp" type="2" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#691E"/>
+			<data scaling="evo7base_TimingTrim8" count="1" offset="#39FC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Trim vs Air Temp" type="2" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="7" offset="#6938"/>
+			<data scaling="evo7base_TimingTrim8" count="1" offset="#3A0A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Trim vs Air Temp Above Load" type="2" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3A24" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Percent Low Temp Timing Trim vs Coolant Temp" type="2" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#691E"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#3A36" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Coil Charge Time" type="2" active="1" help="" class="Main Map Ignition Settings" map_struct="" level="0">
+			<rows scaling="evo7base_Volts16" count="9" offset="#66D0"/>
+			<data scaling="evo7base_uint8" count="1" offset="#3A44" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Coil Charge Time (Unknown 1)" type="2" active="1" help="" class="Main Map Ignition Settings" map_struct="" level="0">
+			<rows scaling="evo7base_Volts16" count="9" offset="#66D0"/>
+			<data count="1" offset="#3A54" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Ignition Coil Charge Time (Unknown 2)" type="2" active="1" help="" class="Main Map Ignition Settings" map_struct="" level="0">
+			<rows scaling="evo7base_Volts16" count="9" offset="#66D0"/>
+			<data count="1" offset="#3A64" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Knock Load (knock ignored below these values)" type="2" active="1" help="" class="Knock contrlol" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3A74" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk105" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3A86" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk138" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="8" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#3AAA" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0067 Desired ISCV intial step position 2" type="2" active="1" help="" class="Idle" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCVSteps" count="1" offset="#3AF0" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand CTS Adder #3" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6DA2"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3AFE" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand CTS Adder #1" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6DA2"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3B0C" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand CTS Adder #4" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3B1A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand CTS Adder #2" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3B28" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand Startup CTS Adder 2" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3B36" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk041" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3B98" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk042" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3BA7" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand Baro Adder " type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Baro16" count="5" offset="#66EC"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#3BBA" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Idle Error - Normal" type="2" active="1" help="" class="Idle" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="9" offset="#65AE"/>
+			<data scaling="evo7base_ISCVSteps" count="1" offset="#3BC6" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Idle Error - A/C On" type="2" active="1" help="" class="Idle" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="9" offset="#65AE"/>
+			<data scaling="evo7base_ISCVSteps" count="1" offset="#3BD6" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Air (COOL)Temperature Compensation ?" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#3BF4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Open Loop Throttle 1" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="13" offset="#64D6"/>
+			<data scaling="evo7base_ThrottleVoltage" count="1" offset="#3D0C" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="GENERATOR - CHARGE CURRENT v LOAD v RPM" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="10" offset="#67E8"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6806"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#3D25" incdata="0" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="GENERATOR TERMINAL DEAD ZONE" type="2" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="10" offset="#655C"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#3D86" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk018" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="9" offset="#6ABE"/>
+			<data count="1" offset="#3D96" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk057" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3E90" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk057-1" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3EA2" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk056" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3EB4" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk058" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3EC6" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk059" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3EDC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk060" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data scaling="evo7base_uint8" count="1" offset="#3EEE" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk034" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Baro16" count="5" offset="#6D70"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F00" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk107" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F0C" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk108" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F1E" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk109" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F30" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk110" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F42" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk044-1" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F54" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk044-2" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#6B14"/>
+			<data scaling="evo7base_Load8" count="1" offset="#3F66" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ST Fuel Trim1" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_O2 Trim" count="1" offset="#41DA" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk045-1" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_uint16" count="5" offset="#6CE4"/>
+			<data count="1" offset="#41E8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk045-2" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_uint16" count="5" offset="#6CE4"/>
+			<data count="1" offset="#41F4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk4" type="3" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="7" offset="#6C94"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6CC8"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#4211" incdata="0" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="unk5" type="3" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#6C7A"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6CC8"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#425B" incdata="0" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="unk0021" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="9" offset="#6CAC"/>
+			<data count="1" offset="#42F6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0022" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="9" offset="#6CAC"/>
+			<data count="1" offset="#4306" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Knock Sensor Filter Map 14" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data count="1" offset="#4E21" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" order="rc" color_dir="1"/>
+		</map>
+		<map name="ST Fuel Max Trim" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_O2 Trim" count="1" offset="#45C2" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="ST Fuel Min Trim" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_O2 Trim" count="1" offset="#45D0" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Air Temperature Compensation AFR 2" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="10" offset="#68BC"/>
+			<data scaling="evo7base_AFR" count="1" offset="#45DE" inc="0" incdata="0.01" incdatab="0.01" min="0" max="20" view="num" color_dir="1"/>
+		</map>
+		<map name="unk091" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data scaling="evo7base_EnrichmentAdj" count="1" offset="#45EE" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Open Loop Throttle 2" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="13" offset="#64D6"/>
+			<data scaling="evo7base_ThrottleVoltage" count="1" offset="#45FE" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk111" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_uint8" count="1" offset="#4856" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Desired Idle RPM-Neutral Stop" type="2" active="1" help="" class="Idle" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_RPM8" count="1" offset="#4864" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk0064" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCV_AX2_16" count="1" offset="#4874" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk70" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#488A" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Post Cranking Transient Enrichment vs Coolant Temp 1" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="10" offset="#68BC"/>
+			<data count="1" offset="#4898" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk092" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data count="1" offset="#48A8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk093" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data count="1" offset="#48B8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk133" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="19" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#48C2" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk134" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="19" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#48D6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk135" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="19" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#48EA" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk136" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="19" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#48FE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="ISCV Demand Startup CTS Adder 1" type="2" active="1" help="" class="ICSV Control" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_ISCV_AX2_8" count="1" offset="#492A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk019" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="11" offset="#6DF6"/>
+			<data count="1" offset="#4946" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk020" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="11" offset="#6DF6"/>
+			<data count="1" offset="#4958" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Knock Sensor Filter Map Base" type="3" active="1" help="" class="Timing" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#6B14"/>
+			<cols scaling="evo7base_Load" count="9" offset="#6B34"/>
+			<data count="1" offset="#497B" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="unk069" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#4BAE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Decel Fuel Cut Delay #5 " type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data scaling="evo7base_EnrichmentAdj" count="1" offset="#4BBC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR-RPM1" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="5" offset="#6D70"/>
+			<data scaling="evo7base_AFR" count="1" offset="#4C20" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk18" type="3" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="4" offset="#6EBE"/>
+			<cols scaling="evo7base_Load" count="5" offset="#715C"/>
+			<data count="1" offset="#4DB5" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="unk19" type="3" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="4" offset="#6EBE"/>
+			<cols scaling="evo7base_Load" count="5" offset="#715C"/>
+			<data count="1" offset="#4DD5" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="unk046 - (ICSV или Trim или Inj Crank)" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6F6A"/>
+			<data count="1" offset="#4DFE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk139" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="16" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#4E06" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="ECU Periphery0 (FAA) Bits - описание ячеек перевернуто" type="2" active="1" help="" class="Periphery" map_struct="" level="0">
+			<rows count="16" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="">
+				<value>bit.15</value>
+				<value>front o2 sensor heater circuit</value>
+				<value>bit.13</value>
+				<value>bit.12</value>
+				<value>Disable EGR / Enabled Ign Adv (set bit=1)</value>
+				<value>timing knockdown on light acceleration and less than 3000rpm</value>
+				<value>Enable Warmup Ign Retard</value>
+				<value>bit.8</value>
+				<value>Enable High Oct Ign Map Lookup (and many other subroutines)</value>
+				<value>"WG solenoid? Enable Speed Limit Test"</value>
+				<value>bit.5</value>
+				<value>for full time open loop set to 0</value>
+				<value>for immobilizer function disable set to 0</value>
+				<value>bit.2</value>
+				<value>rear o2</value>
+				<value>bit.0</value>
+			</rows>
+			<data scaling="evo7base_Hex8" count="1" offset="#FAA" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk064" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="13" offset="#64D6"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#5170" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk112" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#797E"/>
+			<data count="1" offset="#5246" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk113" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="10" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#524E" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk00122-&gt;unk001(2D) и unk31(3D)" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="4" offset="#6700"/>
+			<data count="1" offset="#525E" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Battery voltage compensation" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="17" offset="#70A2"/>
+			<data scaling="evo7base_Volts16" count="1" offset="#527A" incdata="0" max="65535" view="num" color_dir="1"/>
+		</map>
+		<map name="IPW Adder for Cold Start #2" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="10" offset="#68BC"/>
+			<data scaling="ecu_ColdStartTime" count="1" offset="#536A" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Low Octane Fuel Map" active="1">
+			<rows count="14" offset="#6750"/>
+			<cols count="9" offset="#6776"/>
+			<data offset="#5389"/>
+		</map>
+		<map name="unk001 -&gt;unk31 и unk00122" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="4" offset="#6700"/>
+			<data count="1" offset="#574E" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR ???" type="3" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="4" offset="#6EBE"/>
+			<cols scaling="evo7base_Load" count="6" offset="#715C"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#575D" incdata="0" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="unk31 пересекается с unk001(2D) и unk00122(2D)" type="3" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPMStatLimit" count="4" offset="#6EBE"/>
+			<cols scaling="evo7base_Load" count="6" offset="#715C"/>
+			<data count="1" offset="#5781" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" order="cr" color_dir="1"/>
+		</map>
+		<map name="unk114" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data count="1" offset="#57AC" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk066-&gt;unk065" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="12" offset="#68DA"/>
+			<data count="1" offset="#585C" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk032" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Load" count="9" offset="#65E6"/>
+			<data scaling="evo7base_AirFlow8" count="1" offset="#5894" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk033" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Load" count="9" offset="#65E6"/>
+			<data scaling="evo7base_AirFlow8" count="1" offset="#58A4" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk115" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Baro16" count="4" offset="#6700"/>
+			<data count="1" offset="#58B4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk116" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="7" offset="#6938"/>
+			<data count="1" offset="#58BE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk023" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#710A"/>
+			<data scaling="evo7base_Percent255" count="1" offset="#58CC" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk117" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="9" offset="#6880"/>
+			<data count="1" offset="#59B6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk118" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Load" count="9" offset="#65E6"/>
+			<data scaling="evo7base_AirFlow8" count="1" offset="#59D4" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk119" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="5" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#59DE" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk029" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#657A"/>
+			<data count="1" offset="#59EA" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk120" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="5" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#59F2" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk121" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="14" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#59F8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Cranking IPW Compensation vs Time 2-2 (Startup)" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows count="30" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="">
+				<value>0.000</value>
+				<value>0.022</value>
+				<value>0.044</value>
+				<value>0.066</value>
+				<value>0.088</value>
+				<value>0.110</value>
+				<value>0.132</value>
+				<value>0.154</value>
+				<value>0.176</value>
+				<value>0.198</value>
+				<value>0.220</value>
+				<value>0.242</value>
+				<value>0.264</value>
+				<value>0.286</value>
+				<value>0.308</value>
+				<value>0.330</value>
+				<value>0.352</value>
+				<value>0.374</value>
+				<value>0.396</value>
+				<value>0.418</value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+			</rows>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#5D03" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="Cranking IPW Compensation vs Time 2 (Startup)" type="2" active="1" help="" class="Fuel start UP" map_struct="" level="0">
+			<rows count="30" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="">
+				<value>0.000</value>
+				<value>0.022</value>
+				<value>0.044</value>
+				<value>0.066</value>
+				<value>0.088</value>
+				<value>0.110</value>
+				<value>0.132</value>
+				<value>0.154</value>
+				<value>0.176</value>
+				<value>0.198</value>
+				<value>0.220</value>
+				<value>0.242</value>
+				<value>0.264</value>
+				<value>0.286</value>
+				<value>0.308</value>
+				<value>0.330</value>
+				<value>0.352</value>
+				<value>0.374</value>
+				<value>0.396</value>
+				<value>0.418</value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+				<value></value>
+			</rows>
+			<data scaling="evo7base_Percent (128)" count="1" offset="#5D21" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="High Octane Fuel Map" active="1">
+			<rows count="14" offset="#6750"/>
+			<cols count="9" offset="#6776"/>
+			<data offset="#5DFD"/>
+		</map>
+		<map name="unk028" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#657A"/>
+			<data count="1" offset="#6004" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk122" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#6266" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk123" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="11" offset="#64B6"/>
+			<data count="1" offset="#6278" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk124" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#710A"/>
+			<data count="1" offset="#628A" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk125" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#6298" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk049" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_uint16" count="11" offset="#7998"/>
+			<data count="1" offset="#62A6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk126" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#62B8" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk127" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#710A"/>
+			<data count="1" offset="#62C6" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk128" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#62D4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk129" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_uint16" count="11" offset="#7998"/>
+			<data count="1" offset="#62E2" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk130" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#6866"/>
+			<data count="1" offset="#62F4" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk100" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#797E"/>
+			<data count="1" offset="#6302" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="AFR-Air Temperature 1" type="2" active="1" help="" class="Fuel" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#79B8"/>
+			<data scaling="evo7base_AFR" count="1" offset="#6310" incdata="0" view="num" color_dir="1"/>
+		</map>
+		<map name="unk131" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="9" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#6341" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk132" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows count="9" offset="#0" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc=""/>
+			<data count="1" offset="#634B" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk048" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_Temp" count="8" offset="#710A"/>
+			<data count="1" offset="#635A" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk140" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<data count="1" offset="#6478" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" mul="#FFFFFFFF" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk141" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<data count="1" offset="#6486" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk142" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<data count="1" offset="#6494" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="unk143" type="2" active="1" help="" class="" map_struct="" level="0">
+			<rows scaling="evo7base_RPM" count="8" offset="#79F8"/>
+			<data count="1" offset="#64A2" storagetype="uint8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0" incdatab="0" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+		<map name="Coolant Temp Scaling (Volt)" type="2" active="1" help="" class="Misc" map_struct="" level="0">
+			<rows scaling="evo7base_VoltsADCx4" count="167" offset="#99B2"/>
+			<data scaling="evo7base_uint8" count="1" offset="#9900" storagetype="int8" incdata="0.001" incdatab="0.001" min="-40" max="140" view="num" color_dir="1"/>
+		</map>
+		<map name="IAT Scaling" type="2" active="1" help="" class="Misc" map_struct="" level="0">
+			<rows scaling="evo7base_VoltsADCx4" count="123" offset="#9B8C"/>
+			<data count="1" offset="#9B06" storagetype="int8" func_2val="[value]" func_val2="[value]" format="%.2f" metric="" caption="" desc="" inc="1" incb="5" incdata="0.001" incdatab="0.001" inc_dir="1" view="num" color_dir="1"/>
+		</map>
+	</ecu_struct>
+</ecus>
