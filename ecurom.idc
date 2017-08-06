@@ -1951,7 +1951,7 @@ static main() {
   }
 
   processor = get_processor();
-  if (strstr(processor, "SH4") == 0) {
+  if (strstr(processor, "SH2A") == 0) {
     SegmentsSH4B();
     MakeNameEx(0x00000F52, "rom_id", SN_NOLIST);
     MakeDword(0x00000F52);
